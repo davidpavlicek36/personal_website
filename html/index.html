@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Pavlicek</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="page">
+
+        <!-- HEADER -->
+        <header class="header">
+            <h1 class="name">David Pavlicek</h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-target="about">About Me</button>
+                <button class="nav-btn" data-target="skills">Skills</button>
+                <button class="nav-btn" data-target="projects">Projects</button>
+                <button class="nav-btn" data-target="education">Education</button>
+                <button class="nav-btn" data-target="profexp">Prof. Exp.</button>
+            </nav>
+        </header>
+
+        <!-- BODY -->
+        <div class="body-layout">
+
+            <!-- LEFT: Photo (always visible) -->
+            <aside class="sidebar-left">
+                <div class="photo-blob">
+                    <div class="photo-inner">PHOTO</div>
+                </div>
+            </aside>
+
+            <!-- CENTER: Switchable content -->
+            <main class="content-area">
+
+                <section id="about" class="panel active">
+                    <h2>About Me</h2>
+                    <p>Hi! I'm David Pavlicek. I'm a passionate developer and student who loves building things and solving problems. Use the navigation above to explore my skills, projects, education, and professional experience.</p>
+                    <p>I'm currently studying and working, always looking for new challenges and opportunities to grow.</p>
+                    <p>Feel free to reach out if you'd like to collaborate or just have a chat!</p>
+                </section>
+
+                <section id="skills" class="panel">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Programming Languages</li>
+                        <li>Web Development</li>
+                        <li>Database Management</li>
+                        <li>Problem Solving</li>
+                        <li>Team Collaboration</li>
+                    </ul>
+                </section>
+
+                <section id="projects" class="panel">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li>Personal Website — This site!</li>
+                        <li>Project Two — Description here</li>
+                        <li>Project Three — Description here</li>
+                    </ul>
+                </section>
+
+                <section id="education" class="panel">
+                    <h2>Education</h2>
+                    <ul>
+                        <li>University — Degree, Year</li>
+                        <li>High School — Graduated, Year</li>
+                    </ul>
+                </section>
+
+                <section id="profexp" class="panel">
+                    <h2>Professional Experience</h2>
+                    <ul>
+                        <li>Job Title — Company, Year–Year</li>
+                        <li>Role — Company, Year–Year</li>
+                    </ul>
+                </section>
+
+            </main>
+
+            <!-- RIGHT: Job & University card (always visible) -->
+            <aside class="sidebar-right">
+                <div class="info-card">
+                    <div class="info-item">
+                        <span class="info-dot"></span>
+                        <div>
+                            <div class="info-label">Job</div>
+                            <div class="info-value">Your Current Job</div>
+                        </div>
+                    </div>
+                    <hr class="card-divider">
+                    <div class="info-item">
+                        <span class="info-dot"></span>
+                        <div>
+                            <div class="info-label">University</div>
+                            <div class="info-value">Your University</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
