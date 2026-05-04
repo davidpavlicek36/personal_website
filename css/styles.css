@@ -374,6 +374,79 @@ body {
     flex-shrink: 0;
 }
 
+/* === SKILLS === */
+.skills-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.skill-group { display: flex; flex-direction: column; }
+
+.skill-group-title {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: #48484a;
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.skill-rows { display: flex; flex-direction: column; }
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.skill-row:last-child { border-bottom: none; }
+
+.skill-name {
+    font-size: 0.87rem;
+    color: #d1d1d6;
+    width: 148px;
+    flex-shrink: 0;
+}
+
+.skill-pips {
+    display: flex;
+    gap: 4px;
+    flex: 1;
+}
+
+.pip {
+    height: 6px;
+    flex: 1;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.07);
+}
+
+.pip.filled { background: #FFD60A; opacity: 0.85; }
+
+.skill-num {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #8e8e93;
+    width: 18px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.skill-tag {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #636366;
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 2px 7px;
+    flex-shrink: 0;
+}
+
 /* === PROJECT CARDS === */
 .proj-list {
     display: flex;

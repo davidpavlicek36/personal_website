@@ -28,6 +28,76 @@ async function fetchYouTubeStats() {
 
 fetchYouTubeStats();
 
+// === SKILLS ===
+const skillGroups = [
+    {
+        title: 'Programming',
+        items: [
+            { name: 'Python',      level: 8 },
+            { name: 'C++',         level: 6 },
+            { name: 'Java',        level: 6 },
+            { name: 'SQL',         level: 6 },
+            { name: 'HTML / CSS',  level: 4 },
+            { name: 'JavaScript',  level: 3 },
+            { name: 'Kubernetes', level: 3 },
+            { name: 'Docker', level: 3 },
+        ]
+    },
+    {
+        title: 'Data Engineering',
+        items: [
+            { name: 'PySpark',          level: 8 },
+            { name: 'ETL',              level: 8 },
+            { name: 'Data Warehousing', level: 8 },
+            { name: 'Data Pipelines',   level: 7 },
+            { name: 'Azure Databricks', level: 7 },
+            { name: 'PowerBI',          level: 6 },
+        ]
+    },
+    {
+        title: 'Practices',
+        items: [
+            { name: 'Scrum', level: 8 },
+            { name: 'GIT',   level: 7 },
+        ]
+    },
+    {
+        title: 'Languages',
+        items: [
+            { name: 'Czech',   level: 10, tag: 'C2' },
+            { name: 'English', level: 9,  tag: 'C1'     },
+            { name: 'German',  level: 9,  tag: 'C1'     },
+            { name: 'French',  level: 2,  tag: 'B1'     },
+        ]
+    },
+];
+
+const skillsContent = document.getElementById('skills-content');
+if (skillsContent) {
+    const pips = n => Array.from({ length: 10 }, (_, i) =>
+        `<div class="pip${i < n ? ' filled' : ''}"></div>`
+    ).join('');
+
+    skillsContent.innerHTML = `<div class="skills-sections">${
+        skillGroups.map(g => `
+            <div class="skill-group">
+                <div class="skill-group-title">${g.title}</div>
+                <div class="skill-rows">${
+                    g.items.map(s => `
+                        <div class="skill-row">
+                            <span class="skill-name">${s.name}</span>
+                            <div class="skill-pips">${pips(s.level)}</div>
+                            ${s.tag
+                                ? `<span class="skill-tag">${s.tag}</span>`
+                                : `<span class="skill-num">${s.level}</span>`}
+                        </div>`
+                    ).join('')}
+                </div>
+            </div>`
+        ).join('')}
+    </div>`;
+}
+
 // === NAV ===
 const navBtns = document.querySelectorAll('.nav-btn');
 const panels  = document.querySelectorAll('.panel');
