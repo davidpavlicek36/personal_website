@@ -523,6 +523,12 @@ body {
     margin-top: 2px;
 }
 
+.proj-stars {
+    font-size: 0.75rem;
+    color: var(--yellow);
+    margin-left: auto;
+}
+
 /* === EXPERIENCE CARDS === */
 .exp-list {
     display: flex;

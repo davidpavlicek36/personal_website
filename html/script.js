@@ -28,6 +28,25 @@ async function fetchYouTubeStats() {
 
 fetchYouTubeStats();
 
+
+// === GITHUB STARS ===
+async function fetchGitHubStars() {
+    const cards = document.querySelectorAll('.proj-card[data-gh-repo]');
+    await Promise.all([...cards].map(async card => {
+        const repo = card.dataset.ghRepo;
+        try {
+            const res = await fetch(`https://api.github.com/repos/${repo}`);
+            const data = await res.json();
+            const stars = data.stargazers_count;
+            if (typeof stars === 'number') {
+                card.querySelector('.proj-stars').textContent = `★ ${stars.toLocaleString()}`;
+            }
+        } catch (e) {}
+    }));
+}
+
+fetchGitHubStars();
+
 // === SKILLS ===
 const skillGroups = [
     {
