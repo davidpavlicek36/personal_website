@@ -703,13 +703,39 @@ body.is-intro .sidebar-right { opacity: 0; transform: translateX(20px);  pointer
 body.is-intro .content-area  { opacity: 0; transform: translateY(14px);  pointer-events: none; }
 
 /* === RESPONSIVE === */
+
+/* Tablet: ≤ 900px */
 @media (max-width: 900px) {
+    body {
+        padding: 32px 24px;
+        overflow-x: hidden;
+    }
+
+    .page {
+        gap: 32px;
+    }
+
+    .name {
+        font-size: 2.8rem;
+    }
+
     .body-layout {
         grid-template-columns: 1fr;
     }
 
     .sidebar-left {
+        flex-direction: row;
         padding-top: 0;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .profile-card {
+        text-align: left;
+    }
+
+    .profile-links {
+        justify-content: flex-start;
     }
 
     .sidebar-right {
@@ -728,11 +754,98 @@ body.is-intro .content-area  { opacity: 0; transform: translateY(14px);  pointer
     .card-divider {
         display: none;
     }
+
+    .content-area {
+        padding: 28px 24px;
+    }
 }
 
-@media (max-width: 500px) {
-    body { padding: 28px 20px; }
-    .name { font-size: 2.4rem; }
-    .nav { flex-wrap: wrap; border-radius: 16px; }
-    .content-area { padding: 28px 24px; }
+/* Mobile: ≤ 600px */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 16px;
+    }
+
+    .page {
+        gap: 20px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .header {
+        gap: 18px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        border-radius: 16px;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        padding: 10px 16px;
+        flex: 1;
+        text-align: center;
+        min-height: 40px;
+    }
+
+    .sidebar-left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        text-align: center;
+    }
+
+    .profile-links {
+        justify-content: center;
+    }
+
+    .photo-blob {
+        width: 110px;
+        height: 110px;
+    }
+
+    .content-area {
+        padding: 20px 16px;
+    }
+
+    .skill-name {
+        width: 110px;
+        font-size: 0.82rem;
+    }
+
+    .info-card {
+        flex-direction: column;
+    }
+
+    .card-divider {
+        display: block;
+    }
+
+    .info-item {
+        flex: unset;
+    }
+
+    .info-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .info-value {
+        white-space: normal;
+        font-size: 0.85rem;
+    }
+
+    .yt-stats {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .intro-overlay > span {
+        font-size: 2rem;
+    }
 }
